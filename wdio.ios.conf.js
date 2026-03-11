@@ -8,8 +8,8 @@ exports.config = {
   maxInstances: 1,
   capabilities: [{
     platformName: 'iOS',
-    'appium:deviceName': 'iPhone 17 Pro',
-    'appium:platformVersion': '26.2',
+    'appium:deviceName': process.env.IOS_DEVICE || 'iPhone 17 Pro',
+    'appium:platformVersion': process.env.IOS_VERSION || '26.2',
     'appium:automationName': 'XCUITest',
     'appium:app': path.resolve(__dirname, 'apps/ios/My Demo App.app'),
   }],

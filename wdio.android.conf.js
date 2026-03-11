@@ -7,8 +7,8 @@ exports.config = {
   maxInstances: 1,
   capabilities: [{
     platformName: 'Android',
-    'appium:deviceName': 'Pixel_8_Pro_API_35',
-    'appium:avd': 'Pixel_8_Pro_API_35',
+    'appium:deviceName': process.env.ANDROID_AVD || 'Pixel_8_Pro_API_35',
+    'appium:avd': process.env.ANDROID_AVD || 'Pixel_8_Pro_API_35',
     'appium:automationName': 'UiAutomator2',
     'appium:app': path.resolve(__dirname, 'apps/android/mda-2.2.0-25.apk'),
     'appium:avdLaunchTimeout': 180000,

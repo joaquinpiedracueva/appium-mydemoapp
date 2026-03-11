@@ -16,7 +16,13 @@ jobs:
         with:
           node-version: 20
 
+      - name: List available simulators
+        run: xcrun simctl list devices available
+
       - run: npm ci
 
       - name: Run iOS tests
+        env:
+          IOS_DEVICE: iPhone 16 Pro
+          IOS_VERSION: "18.2"
         run: npm run test:ios
