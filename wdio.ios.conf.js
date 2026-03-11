@@ -1,10 +1,10 @@
-import path from 'node:path';
-import os from 'node:os';
-import { execSync } from 'node:child_process';
+const path = require('node:path');
+const os = require('node:os');
+const { execSync } = require('node:child_process');
 
-export const config = {
+exports.config = {
   runner: 'local',
-  specs: ['./tests/**/*.spec.ts'],
+  specs: ['./tests/**/*.test.js'],
   maxInstances: 1,
   capabilities: [{
     platformName: 'iOS',

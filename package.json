@@ -4,13 +4,12 @@
   "version": "1.0.0",
   "scripts": {
     "appium": "appium",
-    "test:android": "wdio run wdio.android.conf.ts",
-    "test:ios": "wdio run wdio.ios.conf.ts",
+    "test:android": "wdio run wdio.android.conf.js",
+    "test:ios": "wdio run wdio.ios.conf.js",
     "test": "rm -rf allure-results && npm run test:android; npm run test:ios",
     "report": "allure generate allure-results/android allure-results/ios --clean -o allure-report && allure open allure-report"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.10",
     "@wdio/allure-reporter": "^9.25.0",
     "@wdio/appium-service": "^9.25.0",
     "@wdio/cli": "^9.25.0",
@@ -22,8 +21,6 @@
     "allure-commandline": "^2.37.0",
     "appium": "^3.2.2",
     "appium-uiautomator2-driver": "^7.0.0",
-    "appium-xcuitest-driver": "^10.26.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "appium-xcuitest-driver": "^10.26.0"
   }
 }
